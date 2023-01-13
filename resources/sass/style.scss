@@ -1,0 +1,42 @@
+@import 'sass/abstracts/animations';
+@import 'sass/abstracts/mixins';
+@import 'sass/abstracts/variables';
+
+@import 'sass/base/base';
+@import 'sass/base/typography';
+@import 'sass/base/utilities';
+
+@import 'sass/components/buttons';
+@import 'sass/components/search';
+@import 'sass/components/event';
+@import 'sass/components/bordered';
+@import 'sass/components/inputs';
+@import 'sass/components/switch';
+@import 'sass/components/filter';
+@import 'sass/components/date-picker';
+@import 'sass/components/custom-select';
+@import 'sass/components/toggle';
+@import 'sass/components/range-slider';
+
+@import 'sass/layout/header';
+@import 'sass/layout/navigation';
+@import 'sass/layout/categories';
+@import 'sass/layout/footer';
+@import 'sass/layout/pagination';
+@import 'sass/layout/wizard';
+@import 'sass/layout/modal';
+@import 'sass/layout/comments';
+@import 'sass/layout/event-rating';
+@import 'sass/layout/dropdown-right';
+@import 'sass/layout/mobile-menu';
+
+
+@import 'sass/pages/home';
+@import 'sass/pages/organization';
+@import 'sass/pages/event-inner';
+@import 'sass/pages/about';
+@import 'sass/pages/contact';
+@import 'sass/pages/user-area';
+@import 'sass/pages/query';
+
+@import 'sass/responsive';

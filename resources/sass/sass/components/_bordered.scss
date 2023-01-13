@@ -1,0 +1,30 @@
+.bordered-container {
+  background-color: #1c3c67;
+  border: 1px solid #0ab1b1;
+  border-radius: 0.8rem;
+  font-family: 'FiraGO';
+  font-style: normal;
+  font-weight: 500;
+
+  .colored-text {
+    color: #0ab1b1;
+  }
+
+  &--red {
+    background-color: #4a2252;
+    border-color: $red;
+
+    .colored-text {
+      color: $red;
+    }
+  }
+
+  &--grey {
+    background-color: #F0F1F5;
+    border-color: #CACEE2;
+
+    .colored-text {
+      color: #343841;
+    }
+  }
+}

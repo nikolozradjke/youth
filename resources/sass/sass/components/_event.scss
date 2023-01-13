@@ -1,0 +1,594 @@
+.single-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    margin-bottom: 60px;
+    font-family: "FiraGO";
+    background-color: #fff;
+    min-width: 0; // Fix to use white-space:nowrap without overflow:hidden 
+    .date-container {
+        position: absolute;
+        left: 0;
+        top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 25px;
+        font-weight: 500;
+        font-size: 1.8rem;
+        z-index: 3;
+        .info-date {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .favorites-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px !important;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #fff;
+            cursor: pointer;
+            &.selected {
+                svg {
+                    path {fill: #EE3048;}
+                }
+            }
+            &.disabled {
+                user-select: none;
+                cursor: initial;
+            }
+        }
+    }
+    .card-image-wrapper {
+        z-index: 2;
+        .card-img {
+            width: 100%;
+            height: 255px;
+            background-color: #6dacab;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 30px 30px 30px;
+        box-shadow: 0px 3px 20px 0px #5f565617, -3px 0px 20px 0px #5f565617, 3px 0px 20px 0px #5f565617;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        .info-title {
+            margin-bottom: 25px;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 3.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+        .info-company {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 40px;
+            .company-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 32px;
+                margin-right: 14px;
+                flex-shrink: 0;
+                background-color: #86b772;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .company-name {
+                font-size: 2.1rem;
+                line-height: 2.6rem;
+                font-weight: 500;
+                color: #5E6673;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &:hover {text-decoration: underline;}
+            }
+        }
+        .location-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5px;
+            min-height: 60px;
+            border: 1px solid #E1E2F2;
+            border-radius: 10px;
+            .icon-pin {
+                position: relative;
+                overflow: hidden;
+                height: 20px;
+                width: 21px;
+                margin-right: 10px;
+                svg {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .info-location {
+                max-width: 92%;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 2.2rem;
+                color: #343841;
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .single-card {
+        margin-bottom: 40px;
+        .card-img {height: 210px;}
+    }
+}
+
+@media (max-width: 660px) {
+    .single-card {
+        width: auto;
+        margin-bottom: 30px;
+        .single-card        .date-container {
+            top: 10px;
+            padding: 0 10px;
+        }
+        .card-info {
+            padding: 25px 10px 15px 10px;
+            .info-title {margin-bottom: 10px;}
+            .info-company {margin-bottom: 20px;}
+            .location-wrapper {padding: 15px 10px;}
+        }
+    }
+}
+
+//organization card
+
+.event {
+    width: 100%;
+    border-radius: 2.5rem;
+    // overflow: hidden;
+    color: $white;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &__share {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.15s ease;
+        border-radius: 50%;
+        perspective: 1000px;
+        backface-visibility: hidden;
+    }
+
+    &:hover .event__share {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__img {
+        width: 100%;
+        padding-top: 59.6%;
+        @include center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 2.5rem 2.5rem 0 0;
+
+        img {
+            position: absolute;
+            @include center-abs;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__tags {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.6rem 0 1.6rem 0;
+        width: 100%;
+        border-bottom: 1px solid #4d4c76;
+        height: 6.5rem;
+        overflow: hidden;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+
+            &:not(:last-child):after {
+                content: "";
+                width: 3px;
+                height: 3px;
+                background-color: $green;
+                border-radius: 50%;
+                margin-left: 8px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: $green-dark;
+            text-decoration: none;
+            transition: 0.15s ease-in-out;
+            font-family: "FiraGO";
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: $blue-dark;
+        padding: 0 2.5rem;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-radius: 0 0 2.5rem 2.5rem;
+    }
+
+    &__date {
+        // padding: 1.8rem 1.3rem 1.8rem 1.4rem;
+        width: 5.5rem;
+        height: 6.5rem;
+        @include center;
+        border: 1px solid $green;
+        border-radius: 2.3rem;
+        margin-right: 1.5rem;
+        background-color: #1c3c67;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.2;
+        color: #0ab1b1;
+        margin-top: 2.2rem;
+        margin-bottom: 2.2rem;
+        text-align: center;
+    }
+
+    &__desc {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 34.4rem;
+    }
+
+    &__location {
+        width: 100%;
+        height: 4rem;
+        border-radius: 1rem;
+        padding: 0 2.3rem;
+        height: 5.8rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid $green;
+        background-color: #1c3c67;
+        margin-bottom: 2.5rem;
+        justify-self: flex-end;
+        overflow: hidden;
+
+        .marker {
+            margin-right: 2rem;
+            width: 1.2rem;
+        }
+
+        *:not(img) {
+            font-family: "FiraGO";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.3rem;
+            line-height: 1.2;
+            color: #0ab1b1;
+            overflow: hidden;
+            opacity: inherit;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            vertical-align: middle;
+        }
+    }
+
+    &__title {
+        color: $white;
+        text-decoration: none;
+        transition: 0.15s ease-in-out;
+        display: block;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        h3 {
+            font-family: "FiraGO";
+            font-style: italic;
+            font-weight: bold;
+            color: $white;
+            font-size: inherit;
+            color: inherit;
+            font-size: 2.2rem;
+            line-height: 1.2;
+            max-height: 7.92rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+            opacity: inherit;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            vertical-align: middle;
+        }
+    }
+
+    &__host {
+        font-family: "FiraGO";
+        font-style: italic;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: $red;
+        display: block;
+        text-decoration: none;
+        transition: 0.15s ease-in-out;
+        backface-visibility: hidden;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        h4 {
+            font-size: inherit;
+            color: inherit;
+        }
+    }
+
+    &__intro {
+        font-size: 1.6em;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        // max-height: 4.8rem;
+        max-height: 5.8rem;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        vertical-align: middle;
+
+        * {
+            font-family: "FiraGO" !important;
+            font-size: inherit !important;
+            line-height: initial !important;
+        }
+
+        a {
+            word-break: break-all;
+        }
+    }
+
+    &__view {
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: $red;
+        text-decoration: none;
+        margin-left: auto;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+        backface-visibility: hidden;
+
+        img {
+            margin-left: 1rem;
+            width: 1.5rem;
+        }
+
+        &:hover img {
+            animation-name: fadeInLeft;
+            animation-duration: 0.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    &--light {
+        margin-bottom: 0;
+
+        .event__date {
+            margin-top: 2.2rem;
+            background: rgba(10, 177, 177, 0.2);
+            border: 0.742424px solid #0ab1b1;
+            box-sizing: border-box;
+            border-radius: 8px;
+            color: #0ab1b1;
+            font-size: 1rem;
+            margin: 0;
+            margin-right: 1.5rem;
+        }
+
+        .event__title {
+            h3 {
+                font-family: "FiraGO";
+                font-style: italic;
+                font-weight: bold;
+                font-size: 1rem;
+                color: #334194;
+                line-height: 1.2;
+                max-height: 2.4rem;
+                overflow: hidden;
+                opacity: inherit;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                vertical-align: middle;
+                margin-top: 0;
+            }
+        }
+
+        .event__host h4 {
+            font-size: 10px;
+        }
+
+        .event__img {
+            border-radius: 1rem 1rem 0 0;
+            padding-top: 53%;
+        }
+
+        .event__bottom {
+            background-color: $white;
+            padding: 1rem 1.08rem;
+            align-items: center;
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        .event__desc {
+            height: auto;
+        }
+    }
+
+    .event__share,
+    .share {
+        position: absolute;
+        top: 2%;
+        right: 2.5%;
+        z-index: 1;
+        cursor: pointer;
+        @include center;
+
+        span {
+            font-family: "FiraGO";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: $red;
+            margin-right: 2rem;
+        }
+
+        .event__desc {
+            height: 30.4rem;
+        }
+
+        .event__title:hover {
+            opacity: 1;
+        }
+
+        .event__host {
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+    }
+}
+
+.event--completed {
+    .event__img {
+        filter:grayscale(100%);
+    }
+}
+
+.organization-card {
+    .organization__title {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #4d4c76;
+        margin-bottom: 1.8rem;
+        width: 100%;
+        height: 8rem;
+        transition: 0.15s;
+
+        &:hover h3 {
+            color: rgba($color: $white, $alpha: 0.8);
+        }
+
+        h3 {
+            margin: 1.6rem 0;
+            font-family: "FiraGO";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            opacity: inherit;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            vertical-align: middle;
+            transition: 0.15s ease;
+        }
+    }
+
+    .organization__fields-container {
+        flex: 1;
+    }
+
+    .organization__fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 1rem;
+        height: 10rem;
+        margin-bottom: 2rem;
+        align-content: flex-start;
+        overflow: hidden;
+
+        h4 {
+            width: 40%;
+            margin-right: 4rem;
+            margin-bottom: 1.4rem;
+            font-family: "FiraGO";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: $white;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}

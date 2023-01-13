@@ -1,0 +1,435 @@
+.button {
+  // @include center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  border-radius: 0.8rem;
+
+  &.edit {
+    .edit-text {
+      display: inline-block;
+    }
+
+    .save-text {
+      display: none;
+    }
+  }
+
+  &.save {
+    .save-text {
+      display: inline-block;
+    }
+
+    .edit-text {
+      display: none;
+    }
+  }
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.button--red,
+.button--gray {
+  background: $red;
+  color: $white;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  border-radius: 0.8rem;
+  height: 4.2rem;
+  border: transparent;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  outline: none;
+
+  &.disabled {
+    opacity: 0.2;
+    cursor: no-drop !important;
+    background: #ee3048 !important;
+  }
+
+  &:hover {
+    background-color: darken($color: $red, $amount: 10%);
+  }
+}
+
+.button--gray {
+  background-color: #bcbccc;
+}
+
+.button--white {
+  background: $white;
+  color: $red;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  border-radius: 0.8rem;
+  height: 4.2rem;
+  border: transparent;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 1.3rem 1.6rem 1.2rem 1.1rem;
+
+  &.disabled {
+    opacity: 0.2;
+    cursor: no-drop !important;
+  }
+
+  &:hover {
+    background-color: darken($color: $white, $amount: 5%);
+  }
+
+  &.button--transparent {
+    background-color: transparent;
+    color: #343841;
+  }
+
+  img {
+    margin-left: 2.5rem;
+  }
+}
+
+.button--blue {
+  background-color: #211f54;
+
+  &:hover {
+    background-color: lighten($color: #211f54, $amount: 10%);
+  }
+}
+
+.button--border-blue {
+  border: 1px solid #334194;
+  color: #334194;
+
+  &:hover {
+    background-color: rgba($color: #334194, $alpha: 0.02);
+  }
+}
+
+.url-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 1.5rem) !important;
+  // max-width: calc(50% - 1.5rem) !important;
+  max-width: 33%;
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  span {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.button--soc {
+  width: 15rem;
+  height: 4.2rem;
+  background-color: #415dae;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($color: #415dae, $amount: 10%);
+  }
+
+  &-red {
+    background-color: #dd4b39;
+
+    &:hover {
+      background-color: darken($color: #dd4b39, $amount: 10%);
+    }
+  }
+}
+
+.subscribe {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  img {
+    width: 1.8rem;
+    margin-right: 2rem;
+  }
+}
+
+.header__button {
+  padding: 1.3rem 1.8rem 1.5rem 1.8rem;
+  @include center;
+  background-color: $brown-dark;
+  color: $orange;
+  border-radius: 0.8rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  text-decoration: none;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  span {
+    margin-left: 2.7rem;
+  }
+
+  &:hover {
+    background-color: lighten($brown-dark, 5%);
+  }
+
+  &--logged-in {
+    background-position: calc(100% - 15px) 48%;
+    background-repeat: no-repeat;
+    background-image: url("/img/icons/arrow-down-orange.svg");
+    width: 17rem;
+
+    span {
+      margin-left: 1.3rem;
+      margin-right: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      padding-bottom: 2px;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+.link-fancy {
+  display: inline-flex;
+  align-items: center;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: $red;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  position: relative;
+  padding: 10px;
+  padding-right: 0;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+
+  .title {
+    position: relative;
+    z-index: 11;
+    margin-right: 1.5rem;
+  }
+
+  .attribute {
+    width: 4rem;
+    @include center;
+    z-index: 1;
+    position: relative;
+    animation-name: slideInLeft;
+    animation-duration: 0.25s;
+    animation-fill-mode: backwards;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    @include center;
+    border-radius: 0.8rem;
+    background-color: $red;
+    margin-left: 1.8rem;
+    transition: 0.15s ease-in-out;
+    z-index: 0;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &:hover .attribute {
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &.not-hover {
+    &:hover:after {
+      width: 4rem;
+    }
+
+    &:hover {
+      color: $red;
+    }
+    .attribute {
+      animation: none;
+    }
+  }
+
+  &--reversed {
+    .title {
+      position: relative;
+      z-index: 11;
+      margin-left: 1.5rem;
+    }
+
+    .attribute {
+      width: 4rem;
+      @include center;
+      z-index: 1;
+      position: relative;
+      animation-name: slideInRight;
+      animation-duration: 0.25s;
+      animation-fill-mode: backwards;
+
+      img {
+        width: 2rem;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      content: "";
+      width: 4rem;
+      height: 4rem;
+      @include center;
+      border-radius: 0.8rem;
+      background-color: $red;
+      margin-left: 1rem;
+      transition: 0.15s ease-in-out;
+      z-index: 0;
+    }
+
+    &:hover .attribute {
+      animation-name: fadeInRight;
+      animation-duration: 0.5s;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+.more-content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #334194;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 18px;
+
+  img {
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  &.active {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.sub-buttons {
+  .button--red {
+    display: none;
+
+    &.active {
+      display: inline-flex;
+    }
+  }
+}
+
+.btn {
+  color: $white;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  border-radius: 0.8rem;
+  height: 4.2rem;
+  border: transparent;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--red {
+    background: $red;
+
+    &.disabled {
+      opacity: 0.2;
+      cursor: no-drop !important;
+      background: #ee3048 !important;
+    }
+
+    &:hover {
+      background-color: darken($color: $red, $amount: 10%);
+    }
+  }
+
+  &--grey {
+    background-color: #bcbccc;
+
+    &:hover {
+      background-color: darken($color: #bcbccc, $amount: 2%);
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #EE3048;
+
+    &:hover {
+      background-color: #fbfbfb;
+    }
+  }
+
+  &--border-red {
+    border: 1px solid #EE3048;
+  }
+}

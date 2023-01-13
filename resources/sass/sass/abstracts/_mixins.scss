@@ -1,0 +1,36 @@
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ @mixin center-abs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+ @mixin  arial {
+   font-family: "BPG Arial 2010";
+ }
+
+ @mixin  segoe {
+   font-family: "Segoe UI Regular";
+ }
+
+ @mixin  glaho {
+   font-family: "BPG Glaho WEB Caps";
+ }
+ 
+ @mixin  nino {
+  font-family: "BPG Nino Mtavruli";
+ }
+ 
+ @mixin  nino-bold {
+  font-family: "BPG Nino Mtavruli Bold";
+ }
+
+ @mixin  dejavu {
+  font-family: 'BPG Excelsior Caps DejaVu 2010';
+ }

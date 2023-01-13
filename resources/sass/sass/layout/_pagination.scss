@@ -1,0 +1,53 @@
+.pagination-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  .pagination {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+
+    background-color: $red;
+    border-radius: 0.8rem;
+    margin-bottom: 4rem;
+
+    &--blue {
+      background-color: #334194;
+    }
+  }
+
+  .page-item {
+    cursor: pointer;
+
+    &.active a,
+    &:hover a {
+      opacity: 1;
+    }
+    &.active p,
+    &:hover p {
+      opacity: 1;
+    }
+  }
+
+  .page-link {
+    font-family: "FiraGO";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: $white;
+    text-decoration: none;
+    margin: 0 1rem;
+    @include center;
+    padding: .7rem;
+
+    opacity: 0.5;
+    transition: 0.15s ease-in-out;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.heading,
+.firago {
+  font-family: "FiraGO";
+  font-weight: bold;
+  font-style: italic;
+  color: $white;
+
+  &--fancy {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: $blue-vivid;
+    padding: 5rem 0;
+
+    &:before {
+      content: "";
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: $blue-vivid;
+      margin-right: 3rem;
+      flex-shrink: 0;
+    }
+
+    &:after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: rgba(51, 65, 148, 0.2);
+      margin-left: 3rem;
+    }
+
+    &-white {
+      color: $white;
+
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        background-color: $white;
+      }
+    }
+  }
+
+  &--upp {
+    font-family: "FiraGOUPP";
+  }
+
+  &--normal {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  &--upper {
+    font-family: 'FiraGOUPP';
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: bold !important;
+  }
+  
+  &--style-normal{
+    font-style: normal;
+  }
+
+  &--xs {
+    font-size: 1.2rem;
+  }
+
+  &--sm {
+    font-size: 1.4rem;
+  }
+
+  &--smm {
+    font-size: 1.6rem;
+  }
+
+  &--md {
+    font-size: 1.8rem;
+  }
+
+  &--mdd {
+    font-size: 2rem;
+  }
+
+  &--lg {
+    font-size: 2.4rem;
+  }
+
+  &--lgg {
+    font-size: 3rem;
+  }
+
+  &--xl {
+    font-size: 3.6rem;
+  }
+
+  &--200 {
+    font-weight: 200;
+  }
+  &--300 {
+    font-weight: 300;
+  }
+  &--500 {
+    font-weight: 500;
+  }
+  &--600 {
+    font-weight: 600;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--dark {
+    color: #211f54;
+  }
+
+  &--dark-blue {
+    color: #211F54;
+  }
+
+  &--blue {
+    color: #334194;
+  }
+
+  &--dark-brown {
+    color: #343841;
+  }
+
+  &--fade-blue {
+    color: #7a82b6;
+  }
+  &--dark {
+    color: #212226;
+  }
+
+  &--ls--xs {
+    letter-spacing: 0.05px;
+  }
+
+  &--ls--sm {
+    letter-spacing: 0.1px;
+  }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &.enter-email-text {
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+  }
+}
+
+.paragraph {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: normal;
+  color: $grey-light;
+  line-height: 1.2;
+
+  &--sm {
+    font-size: 1.3rem;
+  }
+
+  &--md {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  &--lg {
+    font-size: 1.6rem;
+  }
+}
+
+.text-red {
+  color: $red !important;
+}
+
+.text-blue {
+  color: #334194;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+strong {
+  font-weight: bold !important;
+}
+
+em {
+  font-style: italic !important;
+}
+
+sub {
+  vertical-align: sub !important;
+  font-size: smaller !important;
+}

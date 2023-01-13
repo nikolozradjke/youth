@@ -1,0 +1,138 @@
+@-webkit-keyframes fadeInUpSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInDownSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2rem, 0);
+    transform: translate3d(0, -2rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDownSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2rem, 0);
+    transform: translate3d(0, -2rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeftSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2rem, 0, 0);
+    transform: translate3d(-2rem, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeftSmol {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2rem, 0, 0);
+    transform: translate3d(-2rem, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeftDropdown {
+  from {
+    opacity: 0;
+    transform: translate(90%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(100%);
+  }
+}
+
+@keyframes fadeInLeftDropdown {
+  from {
+    opacity: 0;
+    transform: translate(90%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(100%);
+  }
+}
+
+@-webkit-keyframes fadeInUpDropdown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpDropdown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes width {
+  to {
+    width: 400px;
+  }
+}

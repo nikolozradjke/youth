@@ -1,0 +1,55 @@
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+  // font-display: swap;
+}
+
+.section-join-us,
+.section-highlighted {
+  transition: transform 0.3s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.wrapper {
+  max-width: 1720px;
+  // width: 89%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: auto;
+  transition: transform 0.3s ease-in-out;
+  backface-visibility: hidden;
+}
+
+body {
+  background-color: #e5e4ea;
+
+  &.white {
+    background-color: $white;
+  }
+
+  &.frozen {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

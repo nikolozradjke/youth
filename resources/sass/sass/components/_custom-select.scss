@@ -1,0 +1,93 @@
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: "FiraGO";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  border-radius: 1.5rem;
+  background-color: #4d4c76;
+  background-image: url(/img/icons/arrow-down-white.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: calc(100% - 1.5rem) 48%;
+  border: 1px solid #4d4c76;
+  color: $white;
+
+  &.select-arrow-active {
+    background-image: url(/img/icons/arrow-down-select-blue.svg);
+    background-color: #bcbccc;
+    color: #211f54;
+    border-color: $white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    color: #211f54;
+  }
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  //   border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  //   border-color: transparent transparent #fff transparent;
+  top: 7px;
+  background-image: url(/img/icons/arrow-down-select-blue.svg);
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 1.8rem 1rem 1.8rem 2.3rem;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #bcbccc;
+  border: 1px solid white;
+  border-top: 0;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  transition: 0.15s ease-in-out;
+
+  div {
+    color: #211f54;
+  }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected,
+.same-as-selected {
+  background-color: #4d4c76;
+  color: $white !important;
+}

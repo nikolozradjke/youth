@@ -1,0 +1,56 @@
+.toggle-container {
+    display: flex;
+    align-items: center;
+
+    .toggle {
+        margin: 0 2.4rem;
+    }
+
+    .left {
+        width: auto !important;
+    }
+
+    .toggle-title {
+        opacity: 0.5;
+        transition: opacity 0.2s;
+        cursor: pointer;
+        margin: 0 !important;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 4.2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: #4d4c76;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.3rem;
+        background-color: #ffffff;
+        transition: left 0.2s;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+    }
+
+    &.right .slider {
+        left: calc(100% - 1.7rem);
+    }
+}

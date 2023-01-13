@@ -1,0 +1,43 @@
+.header__nav {
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        display: inline-block;
+        a {
+            display:inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            text-decoration: none !important;
+            transition: .15s ease-in-out;
+
+            &:hover {
+                color: $red;
+            }
+
+            &:before {
+                content: '';
+                width: .7rem;
+                height: .7rem;
+                background-color: $red;
+                margin-bottom: 1rem;
+                display: none;
+                border-radius: 50%;
+            }
+        }
+
+        &.active a{
+            color: $red;
+            font-weight: 500;
+
+            &:before {
+                display: block;
+            }
+        }
+    }
+}

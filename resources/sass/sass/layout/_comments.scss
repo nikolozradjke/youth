@@ -1,0 +1,368 @@
+.comments {
+    padding: 12rem 0 6rem 12rem;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 2.4rem 5.3rem 2.9rem 2.7rem;
+    border-radius: 0.8rem;
+    margin-left: 5rem;
+
+    &:nth-child(2n) {
+        background-color: #e5e4ea;
+    }
+
+    &__votes {
+        margin-top: 3rem;
+        display: flex;
+    }
+
+    &__vote {
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #686b6f;
+        text-align: center;
+        transition: 0.15s;
+
+        &:first-child {
+            margin-right: 4.4rem;
+        }
+
+        &--down {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--up svg:hover {
+            path {
+                fill: #0ab1b1;
+            }
+        }
+
+        &--down svg:hover {
+            path {
+                fill: #ee3048;
+            }
+        }
+
+        &--up.active {
+            color: #0ab1b1;
+            svg path {
+                fill: #0ab1b1;
+            }
+        }
+
+        &--down.active {
+            svg path {
+                fill: #ee3048;
+            }
+        }
+
+        svg {
+            height: 2rem;
+            margin-bottom: 2.2rem;
+            cursor: pointer;
+            display: block;
+
+            path {
+                transition: fill 0.15s;
+            }
+        }
+    }
+
+    &__img {
+        @include center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--circle {
+            width: 10.5rem;
+            height: 10.5rem;
+            border-radius: 50%;
+            margin-right: 6.7rem;
+            margin-left: 7rem;
+            flex-shrink: 0;
+        }
+    }
+
+    &__text {
+        max-width: 100rem;
+        // margin-right: 2rem;
+
+        flex: 1;
+        padding: 1.4rem 2rem 2.4rem 1.7rem;
+        border-radius: 0.8rem;
+        border: 1px solid transparent;
+
+        &.active {
+            background-color: $white;
+            border-color: #d6d9ea;
+        }
+    }
+
+    &__author {
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.1em;
+        color: #334194;
+        
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        color: #334194;
+
+        border: none;
+        overflow: auto;
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        min-height: 5rem;
+        height: auto;
+    }
+
+    &__actions {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        flex-shrink: 0;
+
+        .buttons-container {
+            display: flex;
+        }
+    }
+
+    &__button {
+        width: 3.6rem;
+        height: 3.6rem;
+        @include center;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+        border: 0;
+
+        animation-name: fadeIn;
+        animation-duration: 0.2s;
+        animation-fill-mode: backwards;
+
+        &.hidden {
+            display: none;
+        }
+
+        svg {
+            height: 1.1rem;
+            transition: 0.1s;
+
+            path {
+                fill: #fff;
+            }
+        }
+
+        &--edit {
+            margin-right: 0.8rem;
+            background-color: $white;
+
+            &:hover {
+                background-color: darken($color: $white, $amount: 2%);
+            }
+
+            svg path {
+                fill: #686b6f;
+            }
+
+            // &.active {
+            //     background-color: #686b6f;
+
+            //     svg path {
+            //         fill: #fff;
+            //     }
+            // }
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        &--delete, &--cancel {
+            background-color: $red;
+
+            &:hover {
+                background-color: darken($color: $red, $amount: 10%);
+            }
+        }
+
+        &--submit-edit {
+            margin-right: 0.8rem;
+            background-color: #686b6f;
+            width: 11.5rem;
+
+            font-family: "FiraGO";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1;
+            justify-content: space-between;
+            color: $white;
+            padding: 0 1.1rem;
+
+            &:hover {
+                background-color: darken($color: #686b6f, $amount: 10%);
+            }
+        }
+
+        &:active {
+            svg path {
+                fill: $white;
+            }
+            background-color: #686b6f;
+        }
+    }
+
+    &__date {
+        width: 100%;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1;
+        text-align: right;
+        padding-right: 0.8rem;
+        color: #334194;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.comment-form-container {
+    margin-left: 23.2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 5.3rem;
+    position: relative;
+
+    .firago {
+        margin-left: 17.2rem;
+        margin-bottom: 2rem;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #334194;
+    }
+
+    &:after {
+        content: "";
+        width: calc(100% - 17.2rem);
+        position: absolute;
+        bottom: 0;
+        left: 17.2rem;
+        height: 1px;
+        background-color: #cccfe2;
+    }
+
+    .comment__img {
+        margin: 0;
+    }
+
+    .comment-form {
+        display: flex;
+        align-items: center;
+    }
+
+    textarea {
+        flex: 1;
+        height: 16rem;
+        background: #e5e4ea;
+        border-radius: 0.8rem;
+        margin-left: 6.7rem;
+        margin-right: 4.8rem;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        color: #334194;
+        padding: 3.3rem 4.4rem;
+        border: 0;
+        transition: 0.15s;
+
+        &:focus {
+            border: 1px solid #d6d9ea;
+            background-color: $white;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #6872ae;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        &::-moz-placeholder {
+            color: #6872ae;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        &:-ms-input-placeholder {
+            color: #6872ae;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        &:-moz-placeholder {
+            color: #6872ae;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+    }
+
+    .button--red {
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 5.3rem;
+        width: 24rem;
+        margin-left: auto;
+        margin-top: 3rem;
+
+        img {
+            width: 1rem;
+        }
+    }
+}
+
+p.comment__content {
+    height: auto !important;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>მთავარი</title>
+</head>
+
+<body class="white">
+    <div class="header-container">
+        <header class="header">
+            <div class="wrapper header__content">
+                <h1 class="header__logo">
+                    <a href="#"><img src="img/logo.png" alt="logo"></a>
+                </h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li class="active"><a href="#">შესაძლებლობები</a></li>
+                        <li><a href="#">ჩვენ შესახებ</a></li>
+                        <li><a href="#">კონტაქტი</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <div class="header__button">
+                        <img src="img/icons/plus-fancy-orange.svg" alt="add">
+                        <span>დაამატე შესაძლებლობა</span>
+                    </div>
+                    <a href="#" class="header__button">
+                        <img src="img/icons/user-orange.svg" alt="login">
+                        <span>შესვლა</span>
+                    </a>
+                    <div class="lang-container">
+                        <div class="lang">
+                            <div class="lang--selected">geo</div>
+                            <b class="arrow">
+                                <img src="img/icons/arrow-down-green.svg" alt="arrow" draggable="false">
+                            </b>
+                            <div class="lang--available">
+                                <a href="#">eng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="wrapper margin-top--inner">
+        <div class="blue-container blue-container--inner authentication">
+            <div class="login-container">
+                <form action="" class="form-login">
+                    <div class="heading heading--fancy heading--fancy-white">ავტორიზაცია</div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="email">
+                        <label for="email" class="form__label">მეილი ან მობილურის ნომერი</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="password">
+                        <label for="password" class="form__label">ფასვორდი</label>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-5 mt-5">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="firago firago--200 firago--italic firago--xs">დამიმახსოვრე</span>
+                        </label>
+                        <a href="#" class="firago firago--italic firago--xs no-underline">დაგავიწყდა ფასვორდი?</a>
+                    </div>
+                    <div class="button button--red">ავტორიზაცია <img src="img/icons/exit.svg" alt="login"></div>
+                </form>
+                <div class="login-socials margin-h-auto">
+                    <div class="firago firago--md mb-3 mt-2">ან გამოიყენეთ უკვე არსებული პროფილები</div>
+                    <div class="d-flex">
+                        <div class="button button--red button--soc">facebook</div>
+                        <div class="button button--red button--soc button--soc-red">google</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="registration-links">
+                    <div class="firago firago--md mb-2 mt-2">არ გაქვს არსებული ექაუნთი? ნწნწნწნ</div>
+                    <a href="#" class="button button--red">ორგანიზაციებისთვის</a>
+                    <a href="#" class="button button--red">მომხმარებლისთვის</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__content">
+                <div class="socials">
+                    <a href="#">instagram</a>
+                    <a href="#">facebook</a>
+                    <a href="">twitter</a>
+                </div>
+                <div class="terms">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

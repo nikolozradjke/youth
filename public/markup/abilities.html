@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>abilities map</title>
+		<link rel="stylesheet" href="https://youth.loremipsum.ge/css/fonts.css" />
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/animate.min.css"
+		/>
+		<link rel="stylesheet" href="https://youth.loremipsum.ge/css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/jquery-ui.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/jquery-ui.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/datepicker.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/nouislider.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://youth.loremipsum.ge/css/dropzone.min.css"
+		/>
+		<link rel="stylesheet" href="https://youth.loremipsum.ge/css/style.css" />
+	</head>
+	<body>
+		<div class="header-container">
+			<div class="banner banner--yellow">
+				<div class="wrapper banner__content">
+					<img
+						src="https://youthplatform.gov.ge/img/icons/info-blue.svg"
+						alt="info"
+						draggable="false"
+					/>
+					<div>პლატფორმა მუშაობს სატესტო რეჟიმში</div>
+				</div>
+			</div>
+			<header class="header">
+				<div class="wrapper header__content">
+					<!--<div class="burger-nav">
+                  <div class="burger-bar bar-1"></div>
+                  <div class="burger-bar bar-2"></div>
+                  <div class="burger-bar bar-3"></div>
+              </div>-->
+					<h1 class="header__logo">
+						<a href="https://youthplatform.gov.ge/ka"
+							><img
+								src="https://youthplatform.gov.ge/img/Logo_White.svg"
+								alt="logo"
+								draggable="false"
+						/></a>
+					</h1>
+					<nav class="header__nav">
+						<ul>
+							<li>
+								<a href="https://youthplatform.gov.ge/ka/events"
+									>შესაძლებლობები</a
+								>
+							</li>
+							<li class="active">
+								<a href="https://youth.loremipsum.ge/markup/abilities.html"
+									>შესაძლებლობების რუკა</a
+								>
+							</li>
+							<li>
+								<a href="https://youth.loremipsum.ge/markup/library.html"
+									>ბიბლიოთეკა</a
+								>
+							</li>
+							<li>
+								<a href="https://youthplatform.gov.ge/ka/organizations"
+									>ორგანიზაციები</a
+								>
+							</li>
+							<li>
+								<a href="https://youthplatform.gov.ge/ka/about">ჩვენ შესახებ</a>
+							</li>
+							<li>
+								<a href="https://youthplatform.gov.ge/ka/contact">კონტაქტი</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__right">
+						<div class="header__button login-popup-trigger">
+							<img
+								src="https://youthplatform.gov.ge/img/icons/plus-fancy-orange.svg"
+								alt="add"
+								draggable="false"
+							/>
+							<span>დაამატე შესაძლებლობა</span>
+						</div>
+
+						<a
+							href="https://youthplatform.gov.ge/ka/login"
+							class="header__button margin-0"
+						>
+							<img
+								src="https://youthplatform.gov.ge/img/icons/user-orange.svg"
+								alt="login"
+								draggable="false"
+							/>
+							<span>შესვლა</span>
+						</a>
+
+						<!--<div class="lang-container">
+                      <div class="lang">
+                                                                                      <div class="lang--selected">ge</div>
+                              <b class="arrow">
+                                  <img src="https://youthplatform.gov.ge/img/icons/arrow-down-green.svg" alt="arrow" draggable="false">
+                              </b>
+                              <div class="lang--available">
+                                  <a href="https://youthplatform.gov.ge/en">en</a>
+                              </div>
+                                                  </div>
+                  </div>-->
+					</div>
+				</div>
+			</header>
+			<div class="banners">
+				<!-- <div class="banner banner--yellow">
+              <div class="wrapper banner__content">
+                  <img src="https://youthplatform.gov.ge/img/icons/info-blue.svg" alt="info">
+                  <div>პლატფორმა მუშაობს სატესტო რეჟიმში</div>
+              </div>
+          </div> -->
+			</div>
+			<div class="header-bottom-mobile">
+				<div class="wrapper">
+					<!--                 <div class="header__right">
+                  <div class="header__button login-popup-trigger">
+                      <img src="https://youthplatform.gov.ge/img/icons/plus-fancy-orange.svg" alt="add">
+                      <span>დაამატე შესაძლებლობა</span>
+                  </div>
+                  <a href="https://youthplatform.gov.ge/ka/login" class="header__button margin-0">
+                      <img src="https://youthplatform.gov.ge/img/icons/user-orange.svg" alt="login">
+                      <span>შესვლა</span>
+                  </a>
+              </div>
+               -->
+					<div class="search-mobile">
+						<form
+							action="/search"
+							method="GET"
+							class="search-form"
+							autocomplete="off"
+						>
+							<div class="search">
+								<input
+									name="text"
+									required=""
+									type="text"
+									class="search__input"
+									placeholder="მოძებნე შესაძლებლობა ან ორგანიზაცია"
+									value=""
+									autocomplete="off"
+								/>
+								<button class="search__submit">
+									<img
+										src="https://youthplatform.gov.ge/img/icons/search-white.svg"
+										alt="go"
+										draggable="false"
+									/>
+								</button>
+							</div>
+						</form>
+						<div class="burger-nav">
+							<div class="burger-bar bar-1"></div>
+							<div class="burger-bar bar-2"></div>
+							<div class="burger-bar bar-3"></div>
+						</div>
+						<!--<div class="burger-categories">
+                      <div class="burger-bar bar-1"></div>
+                      <div class="burger-bar bar-2"></div>
+                      <div class="burger-bar bar-3"></div>
+                  </div>-->
+					</div>
+				</div>
+			</div>
+			<div class="categorize transition-top" style="top: 107.25px">
+				<div class="categories-container initial">
+					<div class="wrapper">
+						<div class="categories-inner-container">
+							<div class="categories">
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=all"
+									data-type-id="all"
+									class="category"
+								>
+									<h3 class="category__title">ყველა</h3>
+									<div class="category__amount">138</div>
+								</a>
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=1"
+									data-type-id="1"
+									class="category"
+								>
+									<h3 class="category__title">საგანმანათლებლო</h3>
+									<div class="category__amount">86</div>
+								</a>
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=2"
+									data-type-id="2"
+									class="category"
+								>
+									<h3 class="category__title">მოხალისეობრივი</h3>
+									<div class="category__amount">35</div>
+								</a>
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=3"
+									data-type-id="3"
+									class="category"
+								>
+									<h3 class="category__title">სტაჟირება</h3>
+									<div class="category__amount">14</div>
+								</a>
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=4"
+									data-type-id="4"
+									class="category"
+								>
+									<h3 class="category__title">გრანტები</h3>
+									<div class="category__amount">9</div>
+								</a>
+								<a
+									href="https://youthplatform.gov.ge/ka/events?type=5"
+									data-type-id="5"
+									class="category"
+								>
+									<h3 class="category__title">მონაწილეობრივი</h3>
+									<div class="category__amount">33</div>
+								</a>
+								<a
+									style="display: none"
+									title="ორგანიზაციებისთვის"
+									href="https://youthplatform.gov.ge/ka/category/6"
+									class="category"
+								>
+									<h3 class="category__title">ორგანიზაციებისთვის</h3>
+									<div class="category__amount">76</div>
+								</a>
+								<a
+									style="display: none"
+									title="გარემოს დაცვა"
+									href="https://youthplatform.gov.ge/ka/category/7"
+									class="category"
+								>
+									<h3 class="category__title">გარემოს დაცვა</h3>
+									<div class="category__amount">34</div>
+								</a>
+								<a
+									style="display: none"
+									title="ადამიანის უფლებები"
+									href="https://youthplatform.gov.ge/ka/category/8"
+									class="category"
+								>
+									<h3 class="category__title">ადამიანის უფლებები</h3>
+									<div class="category__amount">58</div>
+								</a>
+								<a
+									style="display: none"
+									title="დემოკრატიული ჩართულობა"
+									href="https://youthplatform.gov.ge/ka/category/9"
+									class="category"
+								>
+									<h3 class="category__title">დემოკრატიული ჩართულობა</h3>
+									<div class="category__amount">54</div>
+								</a>
+								<a
+									style="display: none"
+									title="ინოვაციები და ტექნოლოგიები"
+									href="https://youthplatform.gov.ge/ka/category/10"
+									class="category"
+								>
+									<h3 class="category__title">ინოვაციები და ტექნოლოგიები</h3>
+									<div class="category__amount">48</div>
+								</a>
+								<a
+									style="display: none"
+									title="მეწარმეობა"
+									href="https://youthplatform.gov.ge/ka/category/11"
+									class="category"
+								>
+									<h3 class="category__title">მეწარმეობა</h3>
+									<div class="category__amount">38</div>
+								</a>
+								<a
+									style="display: none"
+									title="ჯანმრთელობის დაცვა"
+									href="https://youthplatform.gov.ge/ka/category/12"
+									class="category"
+								>
+									<h3 class="category__title">ჯანმრთელობის დაცვა</h3>
+									<div class="category__amount">32</div>
+								</a>
+								<a
+									style="display: none"
+									title="გართობა და რეკრეაცია"
+									href="https://youthplatform.gov.ge/ka/category/13"
+									class="category"
+								>
+									<h3 class="category__title">გართობა და რეკრეაცია</h3>
+									<div class="category__amount">31</div>
+								</a>
+								<a
+									style="display: none"
+									title="ჰობი და ინტერესები"
+									href="https://youthplatform.gov.ge/ka/category/14"
+									class="category"
+								>
+									<h3 class="category__title">ჰობი და ინტერესები</h3>
+									<div class="category__amount">55</div>
+								</a>
+								<a
+									style="display: none"
+									title="სხვა"
+									href="https://youthplatform.gov.ge/ka/category/15"
+									class="category"
+								>
+									<h3 class="category__title">სხვა</h3>
+									<div class="category__amount">93</div>
+								</a>
+							</div>
+							<div class="trigger" style="display: none">
+								<!-- <div class="trigger-button open"><img src="https://youthplatform.gov.ge/img/icons/dots-green.svg" alt="all-categories" draggable="false"></div> -->
+								<div class="trigger-button open">
+									<svg
+										viewBox="0 0 17 5"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M2.88 0.0639999C1.656 0.0639999 0.696 1.048 0.696 2.224C0.696 3.424 1.656 4.408 2.88 4.408C4.08 4.408 5.04 3.424 5.04 2.224C5.04 1.048 4.08 0.0639999 2.88 0.0639999ZM8.64563 0.0639999C7.42163 0.0639999 6.46163 1.048 6.46163 2.224C6.46163 3.424 7.42163 4.408 8.64563 4.408C9.84563 4.408 10.8056 3.424 10.8056 2.224C10.8056 1.048 9.84563 0.0639999 8.64563 0.0639999ZM14.4113 0.0639999C13.1873 0.0639999 12.2273 1.048 12.2273 2.224C12.2273 3.424 13.1873 4.408 14.4113 4.408C15.6113 4.408 16.5713 3.424 16.5713 2.224C16.5713 1.048 15.6113 0.0639999 14.4113 0.0639999Z"
+											fill="#0AB1B1"
+										></path>
+									</svg>
+								</div>
+								<div class="trigger-button close">
+									<span class="firago firago--sm firago--normal">დახურვა</span>
+									<img
+										src="https://youthplatform.gov.ge/img/icons/x-white.svg"
+										alt="close"
+										draggable="false"
+									/>
+								</div>
+							</div>
+							<form
+								action="/search"
+								method="GET"
+								class="search-form"
+								autocomplete="off"
+							>
+								<div class="search">
+									<input
+										name="text"
+										required=""
+										type="text"
+										class="search__input"
+										placeholder="მოძებნე შესაძლებლობა ან ორგანიზაცია"
+										autocomplete="off"
+									/>
+									<button class="search__submit">
+										<img
+											src="https://youthplatform.gov.ge/img/icons/search-white.svg"
+											alt="go"
+											draggable="false"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- შესაძლებლობების ფილტრები -->
+				<!-- შესაძლებლობების ფილრების დასასრული -->
+
+				<!-- ორგანიზაციების ფილრები -->
+				<!-- ორგანიზაციების ფილრების დასასრული -->
+			</div>
+		</div>
+
+		<section class="coming-soon">
+			<span>Coming soon</span>
+		</section>
+	</body>
+</html>

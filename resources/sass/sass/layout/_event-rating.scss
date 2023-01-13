@@ -1,0 +1,185 @@
+.event-rating {
+    display: flex;
+    align-items: center;
+    max-width: 102rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding-bottom: 9rem;
+
+    .score {
+        @include center;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        color: $white;
+        padding: 3rem 4.7rem;
+        // background: rgba(10, 177, 177, 0.2);
+        // border: 1px solid #0ab1b1;
+        border-radius: 0.8rem;
+        margin-right: 5rem;
+        margin-bottom: 3rem;
+        cursor: pointer;
+
+        background: linear-gradient(180deg, #0ab1b1 -42.92%, #40b1b1 62.84%, #45739e 134.17%);
+        box-shadow: 0px 3px 2px rgba(26, 30, 49, 0.3);
+        position: relative;
+
+        &.disabled {
+            opacity: 0.3;
+            cursor: unset;
+        }
+
+        &:after {
+            content: "დააჭირეთ მეტის სანახავად";
+            font-family: "FiraGO";
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.4rem;
+            text-align: center;
+            color: #334194;
+            opacity: 0.5;
+            width: 20rem;
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .before {
+            font-family: "FiraGO";
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.4rem;
+            text-align: center;
+            color: #334194;
+            opacity: 0.5;
+            width: 20rem;
+            position: absolute;
+            top: unset;
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .criterias {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .criteria {
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #334194;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        width: 36rem;
+
+        &:nth-child(2n + 1) {
+            margin-right: 7rem;
+        }
+
+        &__key {
+            margin-right: 7.5rem;
+        }
+    }
+}
+
+.event-rating--grey {
+    max-width: 120rem;
+    align-items: flex-start;
+    
+    .score {
+        @include center;
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        color: #343841;
+        margin-right: 5rem;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        padding-bottom: 1rem;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        
+        padding: 0;
+        margin-bottom: 0;
+        margin-right: 12rem;
+
+        img {
+            margin-right: 2rem;
+            width: 3rem;
+            height: auto;
+        }
+
+        &.disabled {
+            opacity: 0.3;
+            cursor: unset;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        .before {
+            font-family: 'FiraGOUPP';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+            color: #343841;
+            opacity: 0.7;
+            position: absolute;
+            top: unset;
+            bottom: -4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: underline;
+        }
+    }
+
+    .criterias {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .criteria {
+        font-family: "FiraGO";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #343841;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        width: 36rem;
+
+        &:nth-child(2n + 1) {
+            margin-right: 7rem;
+        }
+
+        &__key {
+            margin-right: 7.5rem;
+        }
+
+        &__value {
+            padding: .6rem 1.5rem;
+            background-color: $white;
+            border-radius: 1rem;
+        }
+    }
+}

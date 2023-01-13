@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'FiraGO Hair';
+    src: url('FiraGO-Hair.eot');
+    src: url('FiraGO-Hair.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Hair.woff2') format('woff2'),
+        url('FiraGO-Hair.woff') format('woff'),
+        url('FiraGO-Hair.ttf') format('truetype'),
+        url('FiraGO-Hair.svg#FiraGO-Hair') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Medium.eot');
+    src: url('FiraGO-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Medium.woff2') format('woff2'),
+        url('FiraGO-Medium.woff') format('woff'),
+        url('FiraGO-Medium.ttf') format('truetype'),
+        url('FiraGO-Medium.svg#FiraGO-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Light.eot');
+    src: url('FiraGO-Light.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Light.woff2') format('woff2'),
+        url('FiraGO-Light.woff') format('woff'),
+        url('FiraGO-Light.ttf') format('truetype'),
+        url('FiraGO-Light.svg#FiraGO-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-MediumItalic.eot');
+    src: url('FiraGO-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-MediumItalic.woff2') format('woff2'),
+        url('FiraGO-MediumItalic.woff') format('woff'),
+        url('FiraGO-MediumItalic.ttf') format('truetype'),
+        url('FiraGO-MediumItalic.svg#FiraGO-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-ExtraLightItalic.eot');
+    src: url('FiraGO-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-ExtraLightItalic.woff2') format('woff2'),
+        url('FiraGO-ExtraLightItalic.woff') format('woff'),
+        url('FiraGO-ExtraLightItalic.ttf') format('truetype'),
+        url('FiraGO-ExtraLightItalic.svg#FiraGO-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO Eight';
+    src: url('FiraGO-EightItalic.eot');
+    src: url('FiraGO-EightItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-EightItalic.woff2') format('woff2'),
+        url('FiraGO-EightItalic.woff') format('woff'),
+        url('FiraGO-EightItalic.ttf') format('truetype'),
+        url('FiraGO-EightItalic.svg#FiraGO-EightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-ExtraLight.eot');
+    src: url('FiraGO-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-ExtraLight.woff2') format('woff2'),
+        url('FiraGO-ExtraLight.woff') format('woff'),
+        url('FiraGO-ExtraLight.ttf') format('truetype'),
+        url('FiraGO-ExtraLight.svg#FiraGO-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO Book';
+    src: url('FiraGO-Book.eot');
+    src: url('FiraGO-Book.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Book.woff2') format('woff2'),
+        url('FiraGO-Book.woff') format('woff'),
+        url('FiraGO-Book.ttf') format('truetype'),
+        url('FiraGO-Book.svg#FiraGO-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-ExtraBold.eot');
+    src: url('FiraGO-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-ExtraBold.woff2') format('woff2'),
+        url('FiraGO-ExtraBold.woff') format('woff'),
+        url('FiraGO-ExtraBold.ttf') format('truetype'),
+        url('FiraGO-ExtraBold.svg#FiraGO-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Thin.eot');
+    src: url('FiraGO-Thin.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Thin.woff2') format('woff2'),
+        url('FiraGO-Thin.woff') format('woff'),
+        url('FiraGO-Thin.ttf') format('truetype'),
+        url('FiraGO-Thin.svg#FiraGO-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-UltraLightItalic.eot');
+    src: url('FiraGO-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-UltraLightItalic.woff2') format('woff2'),
+        url('FiraGO-UltraLightItalic.woff') format('woff'),
+        url('FiraGO-UltraLightItalic.ttf') format('truetype'),
+        url('FiraGO-UltraLightItalic.svg#FiraGO-UltraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-HeavyItalic.eot');
+    src: url('FiraGO-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-HeavyItalic.woff2') format('woff2'),
+        url('FiraGO-HeavyItalic.woff') format('woff'),
+        url('FiraGO-HeavyItalic.ttf') format('truetype'),
+        url('FiraGO-HeavyItalic.svg#FiraGO-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO Book';
+    src: url('FiraGO-BookItalic.eot');
+    src: url('FiraGO-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-BookItalic.woff2') format('woff2'),
+        url('FiraGO-BookItalic.woff') format('woff'),
+        url('FiraGO-BookItalic.ttf') format('truetype'),
+        url('FiraGO-BookItalic.svg#FiraGO-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-LightItalic.eot');
+    src: url('FiraGO-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-LightItalic.woff2') format('woff2'),
+        url('FiraGO-LightItalic.woff') format('woff'),
+        url('FiraGO-LightItalic.ttf') format('truetype'),
+        url('FiraGO-LightItalic.svg#FiraGO-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-ThinItalic.eot');
+    src: url('FiraGO-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-ThinItalic.woff2') format('woff2'),
+        url('FiraGO-ThinItalic.woff') format('woff'),
+        url('FiraGO-ThinItalic.ttf') format('truetype'),
+        url('FiraGO-ThinItalic.svg#FiraGO-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-SemiBoldItalic.eot');
+    src: url('FiraGO-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-SemiBoldItalic.woff2') format('woff2'),
+        url('FiraGO-SemiBoldItalic.woff') format('woff'),
+        url('FiraGO-SemiBoldItalic.ttf') format('truetype'),
+        url('FiraGO-SemiBoldItalic.svg#FiraGO-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO Two';
+    src: url('FiraGO-Two.eot');
+    src: url('FiraGO-Two.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Two.woff2') format('woff2'),
+        url('FiraGO-Two.woff') format('woff'),
+        url('FiraGO-Two.ttf') format('truetype'),
+        url('FiraGO-Two.svg#FiraGO-Two') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Italic.eot');
+    src: url('FiraGO-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Italic.woff2') format('woff2'),
+        url('FiraGO-Italic.woff') format('woff'),
+        url('FiraGO-Italic.ttf') format('truetype'),
+        url('FiraGO-Italic.svg#FiraGO-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO Hair';
+    src: url('FiraGO-HairItalic.eot');
+    src: url('FiraGO-HairItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-HairItalic.woff2') format('woff2'),
+        url('FiraGO-HairItalic.woff') format('woff'),
+        url('FiraGO-HairItalic.ttf') format('truetype'),
+        url('FiraGO-HairItalic.svg#FiraGO-HairItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Bold.eot');
+    src: url('FiraGO-Bold.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Bold.woff2') format('woff2'),
+        url('FiraGO-Bold.woff') format('woff'),
+        url('FiraGO-Bold.ttf') format('truetype'),
+        url('FiraGO-Bold.svg#FiraGO-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Heavy.eot');
+    src: url('FiraGO-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Heavy.woff2') format('woff2'),
+        url('FiraGO-Heavy.woff') format('woff'),
+        url('FiraGO-Heavy.ttf') format('truetype'),
+        url('FiraGO-Heavy.svg#FiraGO-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO Eight';
+    src: url('FiraGO-Eight.eot');
+    src: url('FiraGO-Eight.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Eight.woff2') format('woff2'),
+        url('FiraGO-Eight.woff') format('woff'),
+        url('FiraGO-Eight.ttf') format('truetype'),
+        url('FiraGO-Eight.svg#FiraGO-Eight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-UltraLight.eot');
+    src: url('FiraGO-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-UltraLight.woff2') format('woff2'),
+        url('FiraGO-UltraLight.woff') format('woff'),
+        url('FiraGO-UltraLight.ttf') format('truetype'),
+        url('FiraGO-UltraLight.svg#FiraGO-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO Two';
+    src: url('FiraGO-TwoItalic.eot');
+    src: url('FiraGO-TwoItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-TwoItalic.woff2') format('woff2'),
+        url('FiraGO-TwoItalic.woff') format('woff'),
+        url('FiraGO-TwoItalic.ttf') format('truetype'),
+        url('FiraGO-TwoItalic.svg#FiraGO-TwoItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-Regular.eot');
+    src: url('FiraGO-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Regular.woff2') format('woff2'),
+        url('FiraGO-Regular.woff') format('woff'),
+        url('FiraGO-Regular.ttf') format('truetype'),
+        url('FiraGO-Regular.svg#FiraGO-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-BoldItalic.eot');
+    src: url('FiraGO-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-BoldItalic.woff2') format('woff2'),
+        url('FiraGO-BoldItalic.woff') format('woff'),
+        url('FiraGO-BoldItalic.ttf') format('truetype'),
+        url('FiraGO-BoldItalic.svg#FiraGO-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO Four';
+    src: url('FiraGO-Four.eot');
+    src: url('FiraGO-Four.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-Four.woff2') format('woff2'),
+        url('FiraGO-Four.woff') format('woff'),
+        url('FiraGO-Four.ttf') format('truetype'),
+        url('FiraGO-Four.svg#FiraGO-Four') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraGO Four';
+    src: url('FiraGO-FourItalic.eot');
+    src: url('FiraGO-FourItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-FourItalic.woff2') format('woff2'),
+        url('FiraGO-FourItalic.woff') format('woff'),
+        url('FiraGO-FourItalic.ttf') format('truetype'),
+        url('FiraGO-FourItalic.svg#FiraGO-FourItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-ExtraBoldItalic.eot');
+    src: url('FiraGO-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-ExtraBoldItalic.woff2') format('woff2'),
+        url('FiraGO-ExtraBoldItalic.woff') format('woff'),
+        url('FiraGO-ExtraBoldItalic.ttf') format('truetype'),
+        url('FiraGO-ExtraBoldItalic.svg#FiraGO-ExtraBoldItalic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    src: url('FiraGO-SemiBold.eot');
+    src: url('FiraGO-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('FiraGO-SemiBold.woff2') format('woff2'),
+        url('FiraGO-SemiBold.woff') format('woff'),
+        url('FiraGO-SemiBold.ttf') format('truetype'),
+        url('FiraGO-SemiBold.svg#FiraGO-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
